@@ -33,6 +33,7 @@ For this tutorial, we'll dive straight into using the `letsencrypt-prod` issuer.
 [cert-manager]: https://github.com/jetstack/cert-manager/
 [ClusterIssuer]: https://github.com/jetstack/cert-manager/blob/master/docs/user-guides/cluster-issuers.md
 [manifest]: yaml/letsencrypt-issuer.yaml
+
 -----
 
 **Next:** [Set up Let’s Encrypt &rarr;](40-deploy-an-app.md)

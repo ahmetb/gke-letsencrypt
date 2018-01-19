@@ -7,7 +7,7 @@ with `Ingress` ([see manifest][manifest]):
 
     gcloud compute addresses create helloweb-ip --global
 
-    kubectl apply -f https://rawgit.com/ahmetb/gke-letsencrypt/master/yaml/sample-app.yaml
+    kubectl apply -f https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/sample-app.yaml
 
 Run `kubectl get ingress` until you see the static IP address assigned to the
 load balancer.
