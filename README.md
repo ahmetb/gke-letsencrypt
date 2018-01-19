@@ -1,3 +1,5 @@
+![GKE loves Let’s Encrypt!](img/gke-letsencrypt.png)
+
 # Let’s Encrypt on GKE
 
 [GKE] (Google Kubernetes Engine) does not offer an out-of-the-box HTTPS solution
