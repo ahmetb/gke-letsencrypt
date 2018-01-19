@@ -19,7 +19,7 @@ If you'd like to uninstall Helm:
 
 Do not forget to delete the TLS certificates with:
 
-    kubectl delete secret <NAME>"
+    kubectl delete secret <NAME>
 
 -----
 

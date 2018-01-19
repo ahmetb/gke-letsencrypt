@@ -1,15 +1,21 @@
-apiVersion: extensions/v1beta1
-kind: Ingress
+apiVersion: apps/v1beta1
+kind: Deployment
 metadata:
   name: helloweb
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
   labels:
     app: hello
 spec:
-  backend:
-    serviceName: helloweb-backend
-    servicePort: 8080
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: web
+    spec:
+      containers:
+      - name: hello-app
+        image: gcr.io/google-samples/hello-app:1.0
+        ports:
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service

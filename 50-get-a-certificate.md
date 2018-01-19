@@ -3,7 +3,7 @@
 Save [certificate.yaml](yaml/certificate.yaml) manifest, which will request
 a certificate for a domain name from the `letsencrypt-prod` issuer:
 
-```
+```yaml
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:

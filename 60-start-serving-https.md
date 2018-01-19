@@ -5,8 +5,8 @@ Now that you have a certificate, it’s time to use it!
 You need to update your Ingress to add a `tls` section under the `spec` with the
 `secretName` that stores the TLS certificate and the domain name.
 
-If you've used [the sample mnanifest](yaml/sample-app.yaml) earlier, save the
-[updated Ingress manifest](yaml/ingress-tls.yaml) to your computer, and name it
+If you've used [the sample ingress](yaml/sample-ingress.yaml) earlier, save the
+[updated Ingress manifest](yaml/sample-ingress-tls.yaml) to your computer, and name it
 `ingress-tls.yaml`.
 
 Change the `secretName` and the `hosts` fields with the values you used earlier:
@@ -21,13 +21,13 @@ metadata:
   labels:
     app: hello
 spec:
+  backend:
+    serviceName: helloweb-backend
+    servicePort: 8080
   tls:
   - secretName: www-dogs-com-tls
     hosts:
     - www.dogs.com
-  backend:
-    serviceName: helloweb-backend
-    servicePort: 8080
 ```
 
 

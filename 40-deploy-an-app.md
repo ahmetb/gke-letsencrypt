@@ -1,13 +1,19 @@
-# Deploy a web app on a domain name
+# Deploy a sample web app on a domain name
 
-A brief copy of the [GKE static IP tutorial][tut] is below:
+A brief copy of the [GKE static IP tutorial][tut] is below.
 
-Run these commands to create a static IP address and deploy a sample web app
-with `Ingress` ([see manifest][manifest]):
+First, deploy the [sample web application manifest](yaml/sample-app.yaml) which
+contains the Deployment and a NodePort Service (required by Ingress):
+
+    kubectl apply -f https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/sample-app.yaml
+
+Create a static IP called to (will be used in the Ingress):
 
     gcloud compute addresses create helloweb-ip --global
 
-    kubectl apply -f https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/sample-app.yaml
+Then, deploy the Ingress using [this manifest](yaml/sample-ingress.yaml):
+
+    kubectl apply -f https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/sample-ingress.yaml
 
 Run `kubectl get ingress` until you see the static IP address assigned to the
 load balancer.
