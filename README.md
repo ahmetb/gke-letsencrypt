@@ -10,7 +10,8 @@ or TLS/SSL certificates for your websites today:
 
 Requirements:
 
-- Make sure to have a domain name and a GKE cluster ready to go!
+- A registered domain name
+- A GKE cluster
 - Estimated time: 30 minutes.
 
 ## Steps
@@ -23,6 +24,7 @@ Requirements:
 1. [Start serving HTTPS with the certificate](60-start-serving-https.md)
 1. [Cleanup](99-cleanup.md)
 
+----
 
 #### What's not covered in this tutorial
 
