@@ -20,6 +20,9 @@ limitations under the License.
 
     git clone https://github.com/jetstack/cert-manager.git
 
+    # check out the latest release tag to ensure we use a supported version of cert-manager
+    git checkout v0.2.3
+
     cd cert-manager
 
     helm install --name cert-manager \
