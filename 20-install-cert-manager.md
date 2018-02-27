@@ -18,14 +18,8 @@ limitations under the License.
 
 [cert-manager] is "pre-stable" software,so use it at your own risk. Clone its repository and deploy the Helm chart:
 
-    git clone https://github.com/jetstack/cert-manager.git
-    cd cert-manager
-    
-    # use a supported tag (see https://github.com/jetstack/cert-manager/releases)
-    git checkout v0.2.3
-
     helm install --name cert-manager \
-        --namespace kube-system contrib/charts/cert-manager
+        --namespace kube-system stable/cert-manager
 
 
 [cert-manager]: https://github.com/jetstack/cert-manager/
