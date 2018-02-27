@@ -30,6 +30,10 @@ Install the Helm server-side components (Tiller) on your GKE cluster:
 
     helm init --service-account tiller
 
+Once tiller pod becomes ready, update chart repositories:
+
+    helm repo update
+
 -----
 
 **Next:** [Install cert-manager &rarr;](20-install-cert-manager.md)
