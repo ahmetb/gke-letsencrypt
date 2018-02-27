@@ -10,6 +10,8 @@ or TLS/SSL certificates for your websites today:
 - **[cert-manager]** is a third-party Kubernetes controller that automates
   getting TLS/SSL certificates from Let’s Encrypt and refreshing them.
 
+> :warning::warning: cert-manager is pre-stable software. Use it at your own risk! :warning::warning:
+
 Requirements:
 
 - A registered domain name
