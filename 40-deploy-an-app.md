@@ -38,7 +38,7 @@ Visit this IP address on your browser. **Wait until it works.** (The Google HTTP
 Load Balancer can take 5-10 minutes; during that time you'll see 404s, and other
 server errors. Do not panic, be patient!)
 
-After it works, update your domain name records (at your domain registrar or DNS
+After it works, **update your domain name records** (at your domain registrar or DNS
 provider) with this IP address.
 
 **Verify the domain name works** in your browser before proceeding &mdash;use
