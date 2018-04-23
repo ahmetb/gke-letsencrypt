@@ -19,6 +19,8 @@ limitations under the License.
 Save [certificate.yaml](yaml/certificate.yaml) manifest, which will request
 a certificate for a domain name from the `letsencrypt-prod` issuer:
 
+    curl -O https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/certificate.yaml
+
 ```yaml
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
