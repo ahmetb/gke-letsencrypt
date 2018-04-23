@@ -57,7 +57,7 @@ Go get a cup of coffee.
 Now, while you're waiting, what's happening behind the scenes:
 
 0. cert-manager updates your Ingress to handle `GET /.well-known/acme-challenge/*` requests with a temporary Service it created in your cluster. This will be used to prove that you own the domain name.
-0. You can run `kubectl get ingress -o=yaml hello` to see how it is modified.
+0. You can run `kubectl get ingress -o=yaml helloweb` to see how it is modified.
 0. Since Ingress is updated, Google Cloud Load Balancer is being updated too!
 0. It will take about 5-10 minutes for the changes to take effect.
 0. After Ingress changes take effect, cert-manager will notice that the `/.well-known/*` URL starts working.
