@@ -17,7 +17,7 @@ metadata:
   name: letsencrypt-staging
 spec:
   acme:
-    server: https://acme-staging.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: ''
     privateKeySecretRef:
       name: letsencrypt-staging
@@ -29,7 +29,7 @@ metadata:
   name: letsencrypt-prod
 spec:
   acme:
-    server: https://acme-v01.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     email: ''
     privateKeySecretRef:
       name: letsencrypt-prod
