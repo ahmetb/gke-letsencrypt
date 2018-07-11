@@ -47,7 +47,7 @@ For this tutorial, we'll dive straight into using the `letsencrypt-prod` issuer.
 
 
 [cert-manager]: https://github.com/jetstack/cert-manager/
-[ClusterIssuer]: https://github.com/jetstack/cert-manager/blob/master/docs/user-guides/cluster-issuers.md
+[ClusterIssuer]: https://cert-manager.readthedocs.io/en/latest/reference/clusterissuers.html
 [manifest]: yaml/letsencrypt-issuer.yaml
 
 -----
