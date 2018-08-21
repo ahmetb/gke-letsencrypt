@@ -54,9 +54,9 @@ Then apply this manifest:
 
     kubectl apply -f certificate.yaml
 
-Go get a cup of coffee.
+Go get a cup of coffee. :coffee:
 
-Now, while you're waiting, what's happening behind the scenes:
+Now, while you're waiting, let is cert-manager doing behind the scenes:
 
 0. cert-manager updates your Ingress to handle `GET /.well-known/acme-challenge/*` requests with a temporary Service it created in your cluster. This will be used to prove that you own the domain name.
 0. You can run `kubectl get ingress -o=yaml helloweb` to see how it is modified.
