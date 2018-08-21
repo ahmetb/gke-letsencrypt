@@ -27,7 +27,8 @@ kubectl create serviceaccount -n kube-system tiller
 ```
 
 
-```kubectl create clusterrolebinding tiller-binding \
+```
+kubectl create clusterrolebinding tiller-binding \
     --clusterrole=cluster-admin \
     --serviceaccount kube-system:tiller
 ```
