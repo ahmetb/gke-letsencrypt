@@ -34,9 +34,11 @@ Then, deploy the Ingress using [this manifest](yaml/sample-ingress.yaml):
 Run `kubectl get ingress` until you see the static IP address assigned to the
 load balancer.
 
-Visit this IP address on your browser. **Wait until it works.** (The Google HTTP
+Visit this IP address on your browser.
+
+:warning: **Wait until visiting the IP address works:** The Google HTTP
 Load Balancer can take 5-10 minutes; during that time you'll see 404s, and other
-server errors. Do not panic, be patient!)
+server errors. Do not panic, be patient!
 
 After it works, **update your domain name records** (at your domain registrar or DNS
 provider) with this IP address.
