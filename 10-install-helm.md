@@ -22,13 +22,19 @@ Install the Helm client on your development machine:
 
 Install the Helm server-side components (Tiller) on your GKE cluster:
 
-    kubectl create serviceaccount -n kube-system tiller
+```
+kubectl create serviceaccount -n kube-system tiller
+```
 
-    kubectl create clusterrolebinding tiller-binding \
-        --clusterrole=cluster-admin \
-        --serviceaccount kube-system:tiller
 
-    helm init --service-account tiller
+```kubectl create clusterrolebinding tiller-binding \
+    --clusterrole=cluster-admin \
+    --serviceaccount kube-system:tiller
+```
+
+```
+helm init --service-account tiller
+```
 
 Once tiller pod becomes ready, update chart repositories:
 
