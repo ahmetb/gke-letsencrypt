@@ -66,6 +66,9 @@ every 60 days (or so), because all Let's Encrypt certificates expire every 90
 days! So, don't uninstall cert-manager if you start using this certificate to
 serve traffic.
 
+**Did this work for you?** If so, please take time to ✩Star the repository on
+GitHub.
+
 ----
 
 **Next:** [Cleanup &rarr;](99-cleanup.md)
