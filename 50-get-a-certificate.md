@@ -100,3 +100,6 @@ If you see the "CeritificateIssued" event, it means it has worked!
 
 **Next:** [Start serving HTTPS traffic &rarr;](60-start-serving-https.md)
 
+
+
+![Google Analytics](https://ga-beacon.appspot.com/UA-2609286-16/50-get-a-certificate?pixel)

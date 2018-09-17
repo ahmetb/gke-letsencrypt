@@ -44,3 +44,6 @@ Once tiller pod becomes ready, update chart repositories:
 -----
 
 **Next:** [Install cert-manager &rarr;](20-install-cert-manager.md)
+
+
+![Google Analytics](https://ga-beacon.appspot.com/UA-2609286-16/10-install-helm?pixel)

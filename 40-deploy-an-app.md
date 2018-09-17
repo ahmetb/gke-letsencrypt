@@ -53,3 +53,6 @@ provider) with this IP address.
 -----
 
 **Next:** [Get a certificate for your domain name &rarr;](50-get-a-certificate.md)
+
+
+![Google Analytics](https://ga-beacon.appspot.com/UA-2609286-16/40-deploy-an-app?pixel)
