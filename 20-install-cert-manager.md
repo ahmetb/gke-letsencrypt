@@ -18,7 +18,7 @@ limitations under the License.
 
 [cert-manager] is "pre-stable" software,so use it at your own risk. Clone its repository and deploy the Helm chart:
 
-    helm install --name cert-manager --version v0.4.1 \
+    helm install --name cert-manager --version v0.5.0 \
         --namespace kube-system stable/cert-manager
 
 
