@@ -89,10 +89,20 @@ You can also look at the status of the Certificate resource you just created:
     Normal   SelfCheck             Performing self-check for domain www.dogs.com
     Normal   ObtainAuthorization   Obtained authorization for domain www.dogs.com
     Normal   IssueCertificate      Issuing certificate...
-    Normal   CeritifcateIssued     Certificated issued successfully
+    Normal   CertificateIssued     Certificated issued successfully
     Normal   RenewalScheduled      Certificate scheduled for renewal in 1438 hours
 
-If you see the "CeritificateIssued" event, it means it has worked!
+If you see the "CertificateIssued" event, it means it has worked!
+
+If you don't get the "RenewalScheduled" line, it doesn't mean that the renewal was not sheduled, check it in the cert-manager container logs directly :
+```
+    $ kubectl logs -n kube-system -l app=cert-manager -c cert-manager 
+```
+You should get a line like : 
+```
+I1011 09:35:41.173698       1 sync.go:206] Certificate default/dogs-com-tls scheduled for renewal in 1438 hours
+
+```
 
 **Congratulations, you now have a TLS certificate for your domain!**
 
