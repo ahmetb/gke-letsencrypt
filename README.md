@@ -25,8 +25,6 @@ Requirements:
 1. [Install cert-manager](20-install-cert-manager.md)
 1. [Set up Let's Encrypt](30-setup-letsencrypt.md)
 1. [Deploy a web app on a domain name](40-deploy-an-app.md)
-1. [Get a certificate for your domain](50-get-a-certificate.md)
-1. [Start serving HTTPS with the certificate](60-start-serving-https.md)
 1. [Cleanup](99-cleanup.md)
 
 ----
