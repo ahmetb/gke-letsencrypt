@@ -27,32 +27,55 @@ Create a static IP called to (will be used in the Ingress):
 
     gcloud compute addresses create helloweb-ip --global
 
-Then, deploy the Ingress using [this manifest](yaml/sample-ingress.yaml):
-
-    kubectl apply -f https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/sample-ingress.yaml
-
-Run `kubectl get ingress` until you see the static IP address assigned to the
-load balancer.
-
-Visit this IP address on your browser.
-
-:warning: **Wait until visiting the IP address works:** The Google HTTP
-Load Balancer can take 5-10 minutes; during that time you'll see 404s, and other
-server errors. Do not panic, be patient!
-
-After it works, **update your domain name records** (at your domain registrar or DNS
+**Update your domain name records** (at your domain registrar or DNS
 provider) with this IP address.
 
-**Verify the domain name works** in your browser before proceeding &mdash;use
-`http://`, as we don't have `https://` yet.
+    gcloud compute addresses describe helloweb-ip --global --format 'value(address)'
+
+Save [sample-ingress-tls](yaml/sample-ingress-tls.yaml) manifest, which will request
+a certificate for a domain name from the `letsencrypt-prod` issuer:
+
+    curl -O https://raw.githubusercontent.com/ahmetb/gke-letsencrypt/master/yaml/sample-ingress-tls.yaml
+
+```yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: helloweb
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: helloweb-ip
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    certmanager.k8s.io/acme-http01-edit-in-place: "true"
+  labels:
+    app: hello
+spec:
+  backend:
+    serviceName: helloweb-backend
+    servicePort: 8080
+  tls:
+  - secretName: www-dogs-com-tls
+    hosts:
+    - www.dogs.com
+```
+
+Modify a few things before deploying this manifest:
+
+- Replace `www.dogs.com` with your domain name
+- Replace `dogs-com-tls` (will be used to create the TLS Secret) with a name
+  that is suitable
+- Replace `helloweb` with the Ingress name that your website is running on
+
+Then apply this manifest:
+
+    kubectl apply -f sample-ingress-tls.yaml
+
+**Next:** [Get a certificate for your domain name &rarr;](50-get-a-certificate.md)
 
 
 [tut]: https://cloud.google.com/kubernetes-engine/docs/tutorials/configuring-domain-name-static-ip#step_2b_using_an_ingress
 [manifest]: yaml/sample-app.yaml
 
 -----
-
-**Next:** [Get a certificate for your domain name &rarr;](50-get-a-certificate.md)
 
 
 ![Google Analytics](https://ga-beacon.appspot.com/UA-2609286-16/40-deploy-an-app?pixel)
