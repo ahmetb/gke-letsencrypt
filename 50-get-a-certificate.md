@@ -52,12 +52,15 @@ visit `https://` address of your domain name! 🎉
 during that time you may see 404 or other errors. Do not panic, be patient!
 See Troubleshooting section below if errors persist.
 
+**Certificate Renewals:** Let's Encrypt certificates expire every 90 days! But
+[cert-manager] will keep running and it will renew your certificates before they
+expire. So, don't uninstall cert-manager if you are using this certificate to
+serve traffic.
+
 -----
 
-**Did this work for you?** If so, please take time to ✩Star the repository on
+**Did this work for you?** If so, please take time to **✩Star** the repository on
 GitHub. This would show your support!
-
------
 
 **Next:** [Cleanup &rarr;](99-cleanup.md)
 
@@ -65,7 +68,7 @@ GitHub. This would show your support!
 
 ### Behind the scenes
 
-Let's take a look at what is cert-manager doing behind the scenes after you
+Let's take a look at what is [cert-manager] doing behind the scenes after you
 create the Ingress:
 
 1. cert-manager's
@@ -99,7 +102,6 @@ every 60 days (or so), because all Let's Encrypt certificates expire every 90
 days! So, don't uninstall cert-manager if you start using this certificate to
 serve traffic.
 
------
 
 ### Troubleshooting
 
@@ -109,5 +111,6 @@ To see error logs or events about this process, run the following commands:
   contain errors about load balancer creation/update status,
 - `kubectl describe certificate`: This should show the Certificate events.
 
+[cert-manager]: https://github.com/jetstack/cert-manager
 
 ![Google Analytics](https://ga-beacon.appspot.com/UA-2609286-16/50-get-a-certificate?pixel)
