@@ -57,4 +57,4 @@ This is not an official Google product or documentation.
 [b]: https://issuetracker.google.com/issues/35904733
 
 
-![Google Analytics](https://ga-beacon.appspot.com/UA-2609286-16/README?pixel)
+![](https://ga-beacon.appspot.com/UA-2609286-16/README?pixel)
