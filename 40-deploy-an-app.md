@@ -54,13 +54,10 @@ spec:
     servicePort: 8080
   tls:
   - secretName: www-dogs-com-tls
-    hosts:
-    - www.dogs.com
 ```
 
 Modify a few things before deploying this manifest:
 
-- Replace `www.dogs.com` with your domain name
 - Replace `dogs-com-tls` (will be used to create the TLS Secret) with a name
   that is suitable
 - Replace `helloweb` with the Ingress name that your website is running on

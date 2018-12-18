@@ -27,5 +27,3 @@ spec:
     servicePort: 8080
   tls:
   - secretName: www-dogs-com-tls
-    hosts:
-    - www.dogs.com
