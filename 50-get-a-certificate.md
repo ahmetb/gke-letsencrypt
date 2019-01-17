@@ -28,7 +28,7 @@ Ingress is expected to take quite some time.
 You can view the `Certificate` resource automatically created:
 
 ```
-kg certificate
+kubectl get certificate
 NAME                CREATED AT
 www-dogs-com-tls    1m
 ```
