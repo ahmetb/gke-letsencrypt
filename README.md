@@ -1,6 +1,15 @@
+> 💎🔥💎🔥💎<br/>
+> ### Important Update (April 9,2019)
+> GKE now has beta support for **natively**
+> [provisioning Let's Encrypt TLS certificates](https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs).<br/>
+> This means you should **stop using this tutorial** and
+> use the feature provided by GKE instead.</br>
+> 💎🔥💎🔥💎
+
 ![GKE loves Let’s Encrypt!](img/gke-letsencrypt.png)
 
 # Let’s Encrypt on GKE
+
 
 [GKE] (Google Kubernetes Engine) does not offer an out-of-the-box HTTPS solution
 or TLS/SSL certificates for your websites today:
