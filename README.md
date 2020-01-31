@@ -51,7 +51,6 @@ HTTPS requests from your visitors terminated/proxied by a third-party, these
 services work with GKE apps:
 
 - [Cloudflare] (has a free tier)
-- [Backplane]
 
 -----
 
